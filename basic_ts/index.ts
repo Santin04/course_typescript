@@ -26,3 +26,31 @@ const numbers: number[] = [1, 2, 3];
 const nomes: string[] = ['Mateus', 'Santin'];
 
 //any => definir um dado como any, significa que ele aceita qualquer tipo (evitar)
+
+function showNumbers(a: number, b: number, c?: number){
+    console.log('A: ' + a)
+    console.log('B: ' + b)
+    if(c !== undefined) {
+        console.log('C: ' + c)
+    }
+}
+
+//o terceiro para parâmetro, pro conta do ?, faz com que ele não seja obrigatório
+showNumbers(1,3)
+
+//Union type:
+function unionType(a: number | string){
+    console.log('R$' + a)
+}
+
+unionType(500)
+unionType('600')
+
+//type alias
+type ID = string | number
+
+function showId(id: ID) {
+    console.log('ID: ' + id)
+}
+showId(21)
+showId('2i3')
