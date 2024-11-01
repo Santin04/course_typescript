@@ -54,3 +54,21 @@ function showId(id: ID) {
 }
 showId(21)
 showId('2i3')
+
+function showDirection(direction: 'left' | 'right' | 'center') {
+    console.log(`Direção: ${direction}`)
+}
+
+showDirection('left')
+
+//Com '!' você consegue anular o erro do ts
+
+function showText(text: number | string)  {
+    if(typeof text === 'string') {
+        console.log(text)
+    }
+}
+
+function funcNoReturn(): void {
+    console.log('O void indica que essa é uma função sem retorno')
+}
