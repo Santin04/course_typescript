@@ -72,3 +72,37 @@ function showText(text: number | string)  {
 function funcNoReturn(): void {
     console.log('O void indica que essa é uma função sem retorno')
 }
+
+//callback
+function greet(name: string, callback: (message: string) => void) {
+    const message = `Hello, ${name}!`;
+    callback(message);
+}
+
+greet("Bruno", (message) => {
+    console.log(message);
+});
+
+//valor pre definido
+function preDefinido(num01: number, num02: number = 0){
+    const ret = num01 + num02
+    return ret
+}
+
+console.log(preDefinido(10))
+
+//unknown
+function desconhecido(x: unknown) {
+    console.log(x)
+}
+
+desconhecido('1')
+desconhecido(2)
+desconhecido([1,2,3])
+
+//never indica que a função não vai ter nenhum retorno
+function showError(msg: string): never {
+    throw new Error(msg)
+}
+
+showError('Erro de teste')
