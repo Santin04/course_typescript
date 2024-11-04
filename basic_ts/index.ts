@@ -105,4 +105,18 @@ function showError(msg: string): never {
     throw new Error(msg)
 }
 
-showError('Erro de teste')
+// showError('Erro de teste')
+
+//REST operator
+function sumAll(...n: number[]) {
+    return n.reduce((number, sum) => sum + number)
+}
+console.log(sumAll(1, 2, 3, 4))
+console.log(sumAll(5, 348, 2348))
+
+//destructuring
+function showProduct({name, price}: {name: string, price:number}): string {
+    return `O produto ${name} tem o valor de ${price}`
+}
+const product = {name: 'Vaso', price: 49.90}
+console.log(showProduct(product))
