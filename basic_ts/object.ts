@@ -83,3 +83,21 @@ const goku: SuperHuman = {
     superPowers: ['kamehameha', 'genki dama']
 }
 console.log(goku)
+
+//Marge entre interface
+interface Human02 {
+    name: string
+}
+interface Gun {
+    type: string,
+    caliber: number
+}
+//assim você junta os dois
+type HumanWithGun = Human02 & Gun
+
+const arnold: HumanWithGun = {
+    name: 'Arnold',
+    type: 'shotgun',
+    caliber: 12
+}
+console.log(arnold)
