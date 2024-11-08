@@ -39,3 +39,9 @@ var goku = {
     superPowers: ['kamehameha', 'genki dama']
 };
 console.log(goku);
+var arnold = {
+    name: 'Arnold',
+    type: 'shotgun',
+    caliber: 12
+};
+console.log(arnold);
